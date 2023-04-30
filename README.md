@@ -15,5 +15,5 @@ $ npm install
 ```
 $ npm start
 ```
-可於http://localhost:3000/確認專案是否成功啟動
+可於http://localhost:3000/確認專案是否成功啟動  
 在terminal使用 ctrl + c 停止專案
