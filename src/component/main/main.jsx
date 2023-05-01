@@ -1,8 +1,8 @@
-import { StepProgress } from "../steps/stepProgress";
-import { AddressPhase } from "../steps/step1";
-import { ShippingPhase } from "../steps/step2";
-import { CreditCardPhase } from "../steps/step3";
-import { StepControl } from "../steps/stepControl";
+import { StepProgress } from "../Steps/StepProgress";
+import { AddressPhase } from "../Steps/Step1";
+import { ShippingPhase } from "../Steps/Step2";
+import { CreditCardPhase } from "../Steps/Step3";
+import { StepControl } from "../Steps/StepControl";
 
 export function Main() {
   return (

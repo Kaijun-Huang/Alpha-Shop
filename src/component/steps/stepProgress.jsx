@@ -1,4 +1,4 @@
-import { ReactComponent as Check } from "../../material/icons/pg-complete.svg";
+import { ReactComponent as Check } from "../../assets/icons/pg-complete.svg";
 
 export function StepProgress() {
   return (

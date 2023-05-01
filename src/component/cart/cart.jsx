@@ -1,7 +1,7 @@
-import { ReactComponent as Minus } from "../../material/icons/minus.svg";
-import { ReactComponent as Plus } from "../../material/icons/plus.svg";
-import Product1 from "../../material/images/product-1.jpg";
-import Product2 from "../../material/images/product-2.jpg";
+import { ReactComponent as Minus } from "../../assets/icons/minus.svg";
+import { ReactComponent as Plus } from "../../assets/icons/plus.svg";
+import Product1 from "../../assets/images/product-1.jpg";
+import Product2 from "../../assets/images/product-2.jpg";
 
 export function Cart() {
   return (
