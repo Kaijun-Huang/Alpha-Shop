@@ -1,9 +1,11 @@
-import { ReactComponent as Minus } from "../../assets/icons/minus.svg";
-import { ReactComponent as Plus } from "../../assets/icons/plus.svg";
-import Product1 from "../../assets/images/product-1.jpg";
-import Product2 from "../../assets/images/product-2.jpg";
-
-export function Cart() {
+import { ReactComponent as Minus } from "assets/icons/minus.svg";
+import { ReactComponent as Plus } from "assets/icons/plus.svg";
+import Product1 from "assets/images/product-1.jpg";
+import Product2 from "assets/images/product-2.jpg";
+import "./cart.scss";
+import "component/base.scss";
+import "component/reset.scss";
+export default function Cart() {
   return (
     <>
       <section className="cart-container col col-lg-5 col-sm-12">

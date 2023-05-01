@@ -1,6 +1,6 @@
-import { ReactComponent as Check } from "../../assets/icons/pg-complete.svg";
+import { ReactComponent as Check } from "assets/icons/pg-complete.svg";
 
-export function StepProgress() {
+export default function StepProgress() {
   return (
     <>
       <h2 className="register-title col col-12">結帳</h2>

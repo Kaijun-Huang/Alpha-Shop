@@ -1,7 +1,7 @@
-import { ReactComponent as RightArrow } from "../../assets/icons/right-arrow.svg";
-import { ReactComponent as LeftArrow } from "../../assets/icons/left-arrow.svg";
+import { ReactComponent as RightArrow } from "assets/icons/right-arrow.svg";
+import { ReactComponent as LeftArrow } from "assets/icons/left-arrow.svg";
 
-export function StepControl() {
+export default function StepControl() {
   return (
     <>
       <section className="progress-control-container col col-lg-6 col-sm-12">

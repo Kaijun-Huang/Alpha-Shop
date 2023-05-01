@@ -1,10 +1,15 @@
-import { StepProgress } from "../Steps/StepProgress";
-import { AddressPhase } from "../Steps/Step1";
-import { ShippingPhase } from "../Steps/Step2";
-import { CreditCardPhase } from "../Steps/Step3";
-import { StepControl } from "../Steps/StepControl";
+import StepProgress from "component/Main/Steps/StepProgress";
+import AddressPhase from "component/Main/Steps/Step1";
+import ShippingPhase from "component/Main/Steps/Step2";
+import CreditCardPhase from "component/Main/Steps/Step3";
+import Cart from "component/Main/Cart/Cart";
+import StepControl from "component/Main/Steps/StepControl";
+import "./form.scss";
+import "./register.scss";
+import "component/base.scss";
+import "component/reset.scss";
 
-export function Main() {
+export default function Main() {
   return (
     <>
       {/* main */}
@@ -24,8 +29,9 @@ export function Main() {
               {/* <CreditCardPhase /> */}
             </section>
           </section>
+          <Cart />
+          <StepControl />
         </div>
-        <StepControl />
       </main>
     </>
   );

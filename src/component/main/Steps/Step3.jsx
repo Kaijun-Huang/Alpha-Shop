@@ -1,4 +1,4 @@
-export function CreditCardPhase() {
+export default function CreditCardPhase() {
   return (
     <>
       <form className="col col-12" data-phase="credit-card">

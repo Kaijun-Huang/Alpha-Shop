@@ -1,9 +1,6 @@
-import { Header } from "./component/Header/Header";
-import { Main } from "./component/Main/Main";
-import { Cart } from "./component/Cart/Cart";
-import { Footer } from "./component/Footer/Footer";
-
-import "./component/style/main.scss";
+import Header from "component/Header/Header";
+import Main from "component/Main/Main";
+import Footer from "component/Footer/Footer";
 
 function App() {
   return (
@@ -17,9 +14,8 @@ function App() {
       </head>
       <body>
         <div id="svg-icons-container" style={{ display: "none" }}></div>
-        {/* <Header /> */}
+        <Header />
         <Main />
-        <Cart />
         <Footer />
       </body>
     </>

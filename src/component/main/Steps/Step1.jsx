@@ -40,7 +40,7 @@ function CityOption() {
   );
 }
 
-export function AddressPhase() {
+export default function AddressPhase() {
   return (
     <>
       <form className="col col-12" data-phase="address">
