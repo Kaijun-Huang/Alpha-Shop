@@ -1,8 +1,8 @@
 import Header from "component/Header/Header";
 import Main from "component/Main/Main";
 import Footer from "component/Footer/Footer";
-import "component/Base.scss";
-import "component/Reset.scss";
+import "style/Base.scss";
+import "style/Reset.scss";
 
 function App() {
   return (

@@ -1,11 +1,30 @@
 import { ReactComponent as Minus } from "assets/icons/minus.svg";
 import { ReactComponent as Plus } from "assets/icons/plus.svg";
+import { useState } from "react";
 
-export default function Products({ id, name, img, price, quantity }) {
+export default function Products({
+  name,
+  img,
+  price,
+  subTotalPlus,
+  subTotalMinus,
+}) {
+  const [amount, setAmount] = useState(0);
+  function quantityMinus() {
+    if (amount > 0) {
+      setAmount(amount - 1);
+      subTotalMinus(price);
+    }
+  }
+  function quantityPlus() {
+    setAmount(amount + 1);
+    subTotalPlus(price);
+  }
+
   return (
     <div
       className="product-container col col-12"
-      data-count={quantity}
+      data-count={amount}
       data-price={price}
     >
       <img className="img-container" src={img} alt={name} />
@@ -13,16 +32,16 @@ export default function Products({ id, name, img, price, quantity }) {
         <div className="product-name">{name}</div>
         <div className="product-control-container">
           <div className="product-control">
-            <svg className="product-action minus">
+            <svg className="product-action minus" onClick={quantityMinus}>
               <Minus />
             </svg>
-            <span className="product-count">{quantity}</span>
-            <svg className="product-action plus">
+            <span className="product-count">{amount}</span>
+            <svg className="product-action plus" onClick={quantityPlus}>
               <Plus />
             </svg>
           </div>
         </div>
-        <div className="price">${price}</div>
+        <div className="price">${price * amount}</div>
       </div>
     </div>
   );
