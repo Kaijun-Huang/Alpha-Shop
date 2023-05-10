@@ -32,13 +32,9 @@ export default function Products({
         <div className="product-name">{name}</div>
         <div className="product-control-container">
           <div className="product-control">
-            <svg className="product-action minus" onClick={quantityMinus}>
-              <Minus />
-            </svg>
+            <Minus className="product-action minus" onClick={quantityMinus} />
             <span className="product-count">{amount}</span>
-            <svg className="product-action plus" onClick={quantityPlus}>
-              <Plus />
-            </svg>
+            <Plus className="product-action plus" onClick={quantityPlus} />
           </div>
         </div>
         <div className="price">${price * amount}</div>

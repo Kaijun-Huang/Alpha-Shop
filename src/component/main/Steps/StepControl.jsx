@@ -7,30 +7,22 @@ export default function StepControl({ changeSteps }) {
       <section className="button-group col col-12" data-phase="address">
         <button className="next" onClick={changeSteps}>
           下一步
-          <svg className="cursor-point">
-            <RightArrow />
-          </svg>
+          <RightArrow className="cursor-point" />
         </button>
       </section>
       <section className="button-group col col-12" data-phase="shipping">
         <button className="prev" onClick={changeSteps}>
-          <svg className="cursor-point">
-            <LeftArrow />
-          </svg>
+          <LeftArrow className="cursor-point" />
           上一步
         </button>
         <button className="next" onClick={changeSteps}>
           下一步
-          <svg className="cursor-point">
-            <RightArrow />
-          </svg>
+          <RightArrow className="cursor-point" />
         </button>
       </section>
       <section className="button-group col col-12" data-phase="credit-card">
         <button className="prev" onClick={changeSteps}>
-          <svg className="cursor-point">
-            <LeftArrow />
-          </svg>
+          <LeftArrow className="cursor-point" />
           上一步
         </button>
         <button className="next" onClick={changeSteps}>
