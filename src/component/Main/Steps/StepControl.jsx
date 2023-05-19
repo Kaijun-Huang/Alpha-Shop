@@ -1,7 +1,7 @@
 import { ReactComponent as RightArrow } from "assets/icons/right-arrow.svg";
 import { ReactComponent as LeftArrow } from "assets/icons/left-arrow.svg";
 
-export default function StepControl({ changeSteps }) {
+export default function StepControl({ changeSteps, onFinalConfirm }) {
   return (
     <section className="progress-control-container col col-lg-6 col-sm-12">
       <section className="button-group col col-12" data-phase="address">
@@ -25,7 +25,7 @@ export default function StepControl({ changeSteps }) {
           <LeftArrow className="cursor-point" />
           上一步
         </button>
-        <button className="next" onClick={changeSteps}>
+        <button className="next" onClick={onFinalConfirm}>
           確認下單
         </button>
       </section>
