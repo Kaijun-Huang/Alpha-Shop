@@ -4,46 +4,6 @@ import Products from "./Products";
 // import { useState, useContext } from "react";
 import { CartContext } from "./CartContext";
 export default function Cart({ onQuantityPlus, onQuantityMinus, totalPrice }) {
-  // const [cartItems, setCartItems] = useState(useContext(CartItems));
-
-  // function quantityPlus(id) {
-  //   setCartItems(
-  //     cartItems.map((item) => {
-  //       if (item.id === id) {
-  //         return {
-  //           ...item,
-  //           quantity: item.quantity + 1,
-  //         };
-  //       } else {
-  //         return item;
-  //       }
-  //     })
-  //   );
-  // }
-  // function quantityMinus(id) {
-  //   setCartItems(
-  //     cartItems.map((item) => {
-  //       if (item.id === id && item.quantity > 0) {
-  //         return {
-  //           ...item,
-  //           quantity: item.quantity - 1,
-  //         };
-  //       } else {
-  //         return item;
-  //       }
-  //     })
-  //   );
-  // }
-
-  // function totalPrice() {
-  //   let price = 0;
-  //   cartItems.map((datum) => {
-  //     price += datum.price * datum.quantity;
-  //   });
-
-  //   return price;
-  // }
-
   const cartData = useContext(CartContext);
   return (
     <section className="cart-container col col-lg-5 col-sm-12">
@@ -53,8 +13,8 @@ export default function Cart({ onQuantityPlus, onQuantityMinus, totalPrice }) {
           <Products
             key={item.id}
             {...item}
-            onQuantityPlus={onQuantityPlus}
             onQuantityMinus={onQuantityMinus}
+            onQuantityPlus={onQuantityPlus}
           />
         ))}
       </section>

@@ -25,13 +25,13 @@ export default function Main() {
     }
   };
 
-  const handleQuantityPlus = (id) => {
+  const handleQuantityMinus = (e, id) => {
     setCartItems(
       cartItems.map((item) => {
-        if (item.id === id) {
+        if (item.id === id && item.quantity > 0) {
           return {
             ...item,
-            quantity: item.quantity + 1,
+            quantity: item.quantity - 1,
           };
         } else {
           return item;
@@ -39,13 +39,13 @@ export default function Main() {
       })
     );
   };
-  const handleQuantityMinus = (id) => {
+  const handleQuantityPlus = (e, id) => {
     setCartItems(
       cartItems.map((item) => {
-        if (item.id === id && item.quantity > 0) {
+        if (item.id === id) {
           return {
             ...item,
-            quantity: item.quantity - 1,
+            quantity: item.quantity + 1,
           };
         } else {
           return item;
@@ -124,11 +124,10 @@ export default function Main() {
       卡號: ${cardInfo.cardNum}
       有效期限: ${cardInfo.expireDate}
       背面末三碼: ${cardInfo.cvc}
-      
+
       -----總金額: ${totalPrice()}-----
       
     `;
-    // console.log(buyerInfo);
     console.log(finalInfo);
     alert(finalInfo);
   };
@@ -150,8 +149,8 @@ export default function Main() {
             </section>
           </section>
           <Cart
-            onQuantityPlus={handleQuantityPlus}
             onQuantityMinus={handleQuantityMinus}
+            onQuantityPlus={handleQuantityPlus}
             totalPrice={totalPrice}
           />
 
